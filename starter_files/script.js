@@ -126,7 +126,8 @@ class Truck extends Factory {
         enginesize,
         hitch,
         bed,
-        navigation
+        navigation,
+        trim
     }) {
         super();
         this.model = model;
@@ -135,7 +136,7 @@ class Truck extends Factory {
         this.hitch = hitch;
         this.bed = bed;
         this.navigation = navigation;
-
+        this.trim = trim;
         this.backupcamera = true;
         this.audio = "basic";
         this.warranty = "150,000 miles / 6 years";
