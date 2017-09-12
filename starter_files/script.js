@@ -29,7 +29,7 @@ class Factory {
     }
 
     customerBuild(color, car) {
-        console.log(`Building one ${color} ${car.trim} ${car.model} with the following options: ${car.options}`);
+        console.log(`Building one ${color} ${car.trim} ${car.model} with the following options: ${car.options.join(', ')}.`);
     }
 }
 
@@ -43,7 +43,18 @@ class Factory {
 // Write your code below:
 
 class Car extends Factory {
-    constructor({ model, doors, color, enginetype, transmission, trim, wheelstrim, audio, seatstrim, moonroof }) {
+    constructor({
+        model,
+        doors,
+        color,
+        enginetype,
+        transmission,
+        trim,
+        wheelstrim,
+        audio,
+        seatstrim,
+        moonroof
+    }) {
         super();
         this.model = model;
         this.doors = doors || 4;
@@ -71,7 +82,16 @@ class Car extends Factory {
 // Write your code below:
 
 class Sport extends Car {
-    constructor({ model, trim, transmission, top, color, seatstrim, audio, wheelstrim }) {
+    constructor({
+        model,
+        trim,
+        transmission,
+        top,
+        color,
+        seatstrim,
+        audio,
+        wheelstrim
+    }) {
         super(model, trim, transmission, top, color, seatstrim, audio, wheelstrim);
         this.model = model;
         this.trim = trim;
@@ -100,7 +120,14 @@ class Sport extends Car {
 // Write your code below:
 
 class Truck extends Factory {
-    constructor({ model, color, enginesize, hitch, bed, navigation }) {
+    constructor({
+        model,
+        color,
+        enginesize,
+        hitch,
+        bed,
+        navigation
+    }) {
         super();
         this.model = model;
         this.color = color;
